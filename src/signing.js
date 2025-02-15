@@ -19,7 +19,7 @@ import './signing.css';
 
         localStorage.setItem("userEmail", user.email);
 
-        await axios.post("http://localhost:5000/api/users", userData);
+        await axios.post("https://iitt-backend.onrender.com/api/users", userData);
         alert(`Welcome, ${userData.name}`);
         navigate(`/first`);
       } catch (error) {

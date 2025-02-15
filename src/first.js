@@ -73,7 +73,7 @@ export default function First() {
     try {
       const newStatus = currentStatus === "completed" ? "pending" : "completed";
 
-      await fetch(`http://localhost:5000/updatestatus/${id}`, {
+      await fetch(`https://iitt-backend.onrender.com/updatestatus/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: newStatus }),
