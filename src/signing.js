@@ -17,7 +17,6 @@ import './signing.css';
           email: user.email,
         };
 
-        // Store user email in localStorage
         localStorage.setItem("userEmail", user.email);
 
         await axios.post("http://localhost:5000/api/users", userData);

@@ -10,8 +10,8 @@ export default function Logout() {
     signOut(auth)
       .then(() => {
         localStorage.removeItem("userEmail");
-        localStorage.removeItem("name"); // Clear stored user email (if any)
-        navigate("/"); // Redirect to sign-in page
+        localStorage.removeItem("name"); 
+        navigate("/"); 
       })
       .catch((error) => {
         console.error("Logout Error:", error);

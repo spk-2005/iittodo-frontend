@@ -7,11 +7,8 @@ export default function First() {
   const [taskTitle, setTaskTitle] = useState("");
   const [taskDesc, setTaskDesc] = useState("");
   const [editTaskId, setEditTaskId] = useState(null);
-
-  // Retrieve user email from localStorage
   const userEmail = localStorage.getItem("userEmail");
 
-  // Memoizing fetchTasks using useCallback to prevent unnecessary re-creation
   const fetchTasks = useCallback(async () => {
     if (!userEmail) return;
 
@@ -24,7 +21,6 @@ export default function First() {
     }
   }, [userEmail]);
 
-  // useEffect now includes fetchTasks as a dependency, resolving the warning
   useEffect(() => {
     fetchTasks();
   }, [fetchTasks]);
@@ -47,7 +43,7 @@ export default function First() {
       });
 
       await response.json();
-      fetchTasks(); // Refresh tasks
+      fetchTasks(); 
 
       setTaskTitle("");
       setTaskDesc("");
