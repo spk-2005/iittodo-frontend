@@ -1,0 +1,200 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #todo-section {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+  }
+  
+  #prof {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    color: #333;
+    font-size: 22px;
+  }
+  
+  /* Input Section */
+  #todo-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  #todo-cont h1{    
+    text-align: center;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: 0.3s;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
+  /* Tasks Section */
+  .tasks-section {
+    margin-top: 20px;
+  }
+  .task:nth-child(1){
+    margin-top: 2em;
+  }
+  .task {
+    background: #ffffff;
+    padding: 15px;
+    margin-top: 4em;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .tasks-section h1{
+    color: #333;
+    text-align: center;
+    font-size:2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .task.completed {
+    background-color: #d4edda;
+    border-left: 5px solid #28a745;
+  }
+  
+  .task h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+  }
+  
+  .task p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  #todo-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  #todo-buttons button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 8px;
+    font-size: 14px;
+    background-color: #dc3545;
+  }
+  
+  #todo-buttons button:first-child {
+    background-color: #28a745;
+  }
+  
+  #todo-buttons button:nth-child(2) {
+    background-color: #ffc107;
+    color: #333;
+  }
+  
+  #todo-buttons button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+
+
+
+    .task {
+        width: 100%;
+        background: #ffffff;
+        padding: 5px;
+        margin-top: 1em;
+        margin-bottom: 5px;
+      }
+      .tasks-section h1{
+        color: #333;
+        text-align: center;
+        font-size:2em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      
+      .task.completed {
+        background-color: #d4edda;
+        border-left: 5px solid #28a745;
+      }
+      
+      .task h3 {
+        margin: 0 0 10px 0;
+        font-size: 18px;
+      }
+      
+      .task p {
+        margin: 5px 0;
+        color: #555;
+      }
+
+
+
+
+    #todo-buttons {
+        flex-direction: column;
+    }
+    #todo-buttons button{
+        margin: 1em;
+    }
+    #todo-section {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size:1rem;
+    }
+  
+    input, button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .task h3 {
+      font-size: 16px;
+    }
+  
+    .task p {
+      font-size: 14px;
+    }
+  }
+  
